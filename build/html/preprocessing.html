@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Preprocesamiento &mdash; WAVEWATCHIII Documentation 6.07 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Ejecutar el modelo" href="eje_model.html" />
+    <link rel="prev" title="Compilación" href="compilacion.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> WAVEWATCHIII Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="prereq.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="obt_model.html">Obtener el modelo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmds_ini.html">Comandos iniciales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment.html">Configurando el entorno</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contenidos_comp.html">Contenidos y compilación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_cases.html">Test cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prep_conf.html">Preparar configuración</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compilacion.html">Compilación</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Preprocesamiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eje_model.html">Ejecutar el modelo</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WAVEWATCHIII Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Preprocesamiento</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/preprocessing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="preprocesamiento">
+<h1>Preprocesamiento<a class="headerlink" href="#preprocesamiento" title="Permalink to this headline">¶</a></h1>
+<p># Archivos de entrada</p>
+<p>## ww3_grid</p>
+<p>### inputs
+- ww3_grid.inp
+- archivo de batimetría (.bottom)
+- archivo de mallado de obstruccione (.obstr)
+- archivo mallada de máscara (.mask)</p>
+<p>Los últimos 3 archivos son generados por la herramienta gridgen, por lo que es importante</p>
+<p>### output
+- Standard out (Salida formateada del programa)
+- mod_def.ww3 (Archivo de definición de modelo en formato WAVEWATCH III.)
+- mask.ww3 (Archivo de máscara de tierra-mar (interruptor o2a).)</p>
+<p>### Parámetros que se definen
+- Frecuencia inicial y factor de incremento de la frecuencia
+- número de frecuencias (Información espectral)
+- Información de paso de tiempo
+- Resolución</p>
+<p>## ww3_prep</p>
+<p>### inputs
+- ww3_strt.inp
+- mod_def.ww3</p>
+<p>### output
+- Standard out
+- restart.ww3</p>
+<p>### Parámetros que se definen
+Define el tipo de archivo inicial con el cual se ejecuta el modelo, elige el <strong>tipo de espectro que se empleara en las condiciones iniciales</strong></p>
+<ul class="simple">
+<li><p>ww3_prep.inp</p></li>
+<li><p>mod_def.ww3</p></li>
+<li><p>Standard out</p></li>
+<li><p>level.ww3, current.ww3, wind.ww3, ice.ww3</p></li>
+<li><p>data0.ww3, data1.ww3,data2.ww3</p></li>
+<li><p>Forzadores del modelo</p></li>
+<li><p>Magnitudes de la malla</p></li>
+<li><p>Se define donde arranca y donde termina (LAT - LON)</p></li>
+<li><p>ww3_shel.inp</p></li>
+<li><p>mod_def.ww3, level.ww3,</p></li>
+</ul>
+<blockquote>
+<div><p>current.ww3, wind.ww3, ice.ww3,
+restar.ww3</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>nest.ww3, data0.ww3, data1.ww3,</p></li>
+</ul>
+<blockquote>
+<div><p>data2.ww3</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>track_i.ww3</p></li>
+</ul>
+<p>-Standard out
+-log.ww3, test.ww3</p>
+<p>restarn.ww3, nestn.ww3
+-out_grd.ww3
+-out_pnt.ww3</p>
+<ul class="simple">
+<li><p>Ejecución del modelo</p></li>
+<li><p>Tiempo de cálculo, cuando</p></li>
+</ul>
+<p>empieza y cuando termina
+- Definir el tipo de archivo de salida
+del modelo</p>
+<p>output del modelo</p>
+<p><em>se recomienda el uso de ncview y ncdump para la manipulaicón de archivos en formato netCDF</em></p>
+<p>Gridgen</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="eje_model.html" class="btn btn-neutral float-right" title="Ejecutar el modelo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="compilacion.html" class="btn btn-neutral float-left" title="Compilación" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Franklin Ayala.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

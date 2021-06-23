@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Prerequisites &mdash; WAVEWATCHIII Documentation 6.07 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Obtener el modelo" href="obt_model.html" />
+    <link rel="prev" title="Documentacion WAVEWATCH III!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> WAVEWATCHIII Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Prerequisites</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#fortran-and-c-compilers">Fortran and C++ compilers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-netcdf">Installing netCDF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installing-dependences">Installing dependences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-netcdf">Building netCDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-mpich">Installing MPICH</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="obt_model.html">Obtener el modelo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmds_ini.html">Comandos iniciales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment.html">Configurando el entorno</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contenidos_comp.html">Contenidos y compilación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_cases.html">Test cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prep_conf.html">Preparar configuración</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compilacion.html">Compilación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preprocessing.html">Preprocesamiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eje_model.html">Ejecutar el modelo</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WAVEWATCHIII Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Prerequisites</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/prereq.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="prerequisites">
+<h1>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Fortran compiler on linux</p></li>
+<li><p>C++ compiler on Linux</p></li>
+<li><p>netCDF library</p></li>
+<li><p>MPICH library</p></li>
+</ul>
+<div class="section" id="fortran-and-c-compilers">
+<h2>Fortran and C++ compilers<a class="headerlink" href="#fortran-and-c-compilers" title="Permalink to this headline">¶</a></h2>
+<p>First and foremost, it is very important to have a Fortran and C++ compiler (gcc, cpp, etc.). We recommend gfortran and gcc. To test whether these exist on the system, type the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>which gfortran
+which cpp
+which gcc
+</pre></div>
+</div>
+<p>If you have these installed, you should be given a path for the location of each. If you dont have you can install them from your terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install build-essential
+sudo apt-get install gfortran
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install gcc gfortran
+</pre></div>
+</div>
+<p>These commands should install the latest versions of gfortran and gcc available for your system. To determine the versions of your libraries you have, type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gcc --version
+gfortran --version
+cpp --version
+</pre></div>
+</div>
+</div>
+<div class="section" id="installing-netcdf">
+<h2>Installing netCDF<a class="headerlink" href="#installing-netcdf" title="Permalink to this headline">¶</a></h2>
+<p>It’s possible to install netCDF directly from snap on the ubuntu terminal with <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">libnetcdf-dev</span> <span class="pre">libnetcdff-dev</span></code> (this would download the lastest version netCDF), however this opction could bring problems at the moment to coupling WW3 with WRF troughout OASIS. The main reason is the 3 models must be compiled with the same netCDF version,  and the lastest version netCDF seems to be conflicting with older WRF versions (v3.7.1) used in this documentation.</p>
+<p>It is recommended to install netCDF-Fortran and netCDF-C manually, to do this first it woul be installed 2 dependeces: zlib and hdf5. These libraries together with libpng and jasper libraries will be used for the WRF compiling.</p>
+<div class="section" id="installing-dependences">
+<h3>Installing dependences<a class="headerlink" href="#installing-dependences" title="Permalink to this headline">¶</a></h3>
+<p>Before getting started, you must move into to the folder that contain WRF model directory and to type.</p>
+<p>mkdir -p Build_WRF/Libraries</p>
+<p>The command -p will create parent directory first if it doesn’t exist, i.e <code class="docutils literal notranslate"><span class="pre">Build_WRF</span></code> and then will create the folder <code class="docutils literal notranslate"><span class="pre">Libraries</span></code> where will be installed the libraries.</p>
+<p>Add the following enviroment variables to your bash profile. In our case, the bash profile is <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code>, this file is normally in <code class="docutils literal notranslate"><span class="pre">home</span></code> folder and you can easily edit it.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">DIR</span><span class="o">=</span>/home/franklin/Documentos/WRF/Build_WRF/Libraries
+<span class="nb">export</span> <span class="nv">CC</span><span class="o">=</span>gcc
+<span class="nb">export</span> <span class="nv">CXX</span><span class="o">=</span>g++
+<span class="nb">export</span> <span class="nv">FC</span><span class="o">=</span>gfortran
+<span class="nb">export</span> <span class="nv">FCFLAGS</span><span class="o">=</span>-m64
+<span class="nb">export</span> <span class="nv">F77</span><span class="o">=</span>gfortran
+<span class="nb">export</span> <span class="nv">FFLAGS</span><span class="o">=</span>-m64
+</pre></div>
+</div>
+<p>and type the following command to upload the change sin bash profile:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sourde ~/.zshrc
+</pre></div>
+</div>
+<p>The firt library to be installed is zlib. zlib is a library used to SOMETHING. Go to the <a class="reference external" href="https://zlib.net/">zlib oficial page</a>  and download the suorce files to the installation (file .tar) in <code class="docutils literal notranslate"><span class="pre">Libraries</span></code> directory . In our case, we choose the version 1.2.8. In your terminal type the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$DIR</span>
+tar xvf zlib-1.2.8.tar.gz
+./configure --prefix<span class="o">=</span><span class="nv">$DIR</span>/grib2<span class="p">;</span> make clean<span class="p">;</span> make all install
+<span class="nb">cd</span> ..
+</pre></div>
+</div>
+<p>The folder in <code class="docutils literal notranslate"><span class="pre">$DIR/grib2</span></code> is the folder where will be installed and we explain it.</p>
+<p>The other library, hdf5 is used in SOMETHING. HDF5 is available from the <a class="reference external" href="https://www.hdfgroup.org/downloads/hdf5/">HDF5 downloads site</a> . Our version installed is 1.8.13 and the installing process is similar to the zlib</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar xvf hdf5-1.8.13.tar.gz
+<span class="nb">cd</span> hdf5-1.8.13
+./configure --prefix<span class="o">=</span><span class="nv">$DIR</span>/grib2 --with-zlib<span class="o">=</span><span class="nv">$DIR</span>/grib2<span class="p">;</span> make clean<span class="p">;</span> make all install
+<span class="nb">cd</span> ..
+</pre></div>
+</div>
+<p>the command –with-zlib link the hdf5 with zlib library.</p>
+<p>If you go to the grib2 directory, and you type <code class="docutils literal notranslate"><span class="pre">ls</span></code> in your terminal, you could get something like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>libhdf5.a     libhdf5_hl.la  libhdf5_hl.so.8      libhdf5.la        libhdf5.so    libhdf5.so.8.0.2  libz.so    libz.so.1.2.8
+libhdf5_hl.a  libhdf5_hl.so  libhdf5_hl.so.8.0.2  libhdf5.settings  libhdf5.so.8  libz.a            libz.so.1  pkgconfig
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-netcdf">
+<h3>Building netCDF<a class="headerlink" href="#building-netcdf" title="Permalink to this headline">¶</a></h3>
+<p>netCDF library is used widely for the meteorological and oceanic data. In versions before 4.2, the Fortran netCDF library source (netCDF-Fortran) was bundled with the C library source (netCDF-C) in one distribution. With more recent versions, the Fortran netCDF library has been split off into an independent source distribution, intended to be built as a separate library, after the C library is built and installed.</p>
+<p>We decide to install 4.1.3 version, but you can install a newer version if you want it.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>We recommend a library where NetCDF-4/HDF-5 is enabled.</p>
+</div>
+<p>To install the version above mentioned, visit the <a class="reference external" href="https://www.unidata.ucar.edu/downloads/netcdf/">netCDF downloads site</a> and get your .tar file. Then, type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar xvf netcdf-4.1.3.tar.gz
+<span class="nb">cd</span> netcdf-4.1.3
+<span class="nv">LDFLAGS</span><span class="o">=</span>-L<span class="nv">$DIR</span>/grib2/lib <span class="nv">CPPFLAGS</span><span class="o">=</span>-I<span class="nv">$DIR</span>/grib2/include ./configure --prefix<span class="o">=</span><span class="nv">$DIR</span>/netcdf<span class="p">;</span> make clean<span class="p">;</span> make all install
+<span class="nb">cd</span> ..
+</pre></div>
+</div>
+<p>You can test if your netCDF library were well built typing these command lines in your terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://www.unidata.ucar.edu/software/netcdf/examples/programs/simple_xy_wr.f90
+gfortran simple_xy_wr.f90 -o test_nc.exe -I<span class="nv">$NETCDF</span>/include -L<span class="nv">$NETCDF</span>/lib -lnetcdff
+./test_nc.exe
+</pre></div>
+</div>
+<p>This should print:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0          12          24          36
+SUCCESS writing example file simple_xy.nc!
+</pre></div>
+</div>
+<p>There is a lot of available tools to check, pre-visualizate and manipulate data content in .nc files. <code class="docutils literal notranslate"><span class="pre">ncdump</span></code> is one of them and can be installed with the commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install netcdf-bin
+</pre></div>
+</div>
+<p>if you type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncdump -h simple_xy.nc
+</pre></div>
+</div>
+<p>This print information about the .nc file:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>netcdf simple_xy {
+dimensions:
+x = 6 ;
+y = 12 ;
+variables:
+int data(x, y) ;
+}
+</pre></div>
+</div>
+<p>Finally, its important to verify that the installed version has netCDF4, to do it, move into <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory in <code class="docutils literal notranslate"><span class="pre">$NETCDF</span></code> and type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./nc-config --has-nc4
+</pre></div>
+</div>
+<p>If the terminal print: <strong>yes</strong>, then all is working perfectly!</p>
+</div>
+<div class="section" id="installing-mpich">
+<h3>Installing MPICH<a class="headerlink" href="#installing-mpich" title="Permalink to this headline">¶</a></h3>
+<p>MPICH library is necessary if you are planning to build WW3 in parallel and to couple WW3 with WRF. If your machine does not have more than 1 processor, or if you have no need to run WW3 with multiple processors, you can skip this section.</p>
+<p>To install this library:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install mpich
+</pre></div>
+</div>
+<p>if was correctly installed, the you can type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>which mpirun
+</pre></div>
+</div>
+<p>you should be given a path for the location of each.</p>
+<p>./ungrib.exe: error while loading shared libraries: libpng12.so.0: cannot open shared object file: No such file or directory</p>
+<blockquote>
+<div><p>When the coupling</p>
+</div></blockquote>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /your_software/../lib/ <span class="o">(</span>the directory containing libz.so.1<span class="o">)</span>
+mv libz.so.1 libz.so.1.old
+ln -s /lib/x86_64-linux-gnu/libz.so.1
+</pre></div>
+</div>
+<p>The solution were found in this <a class="reference external" href="https://stackoverflow.com/questions/48306849/lib-x86-64-linux-gnu-libz-so-1-version-zlib-1-2-9-not-found">stackoverflow questions</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="obt_model.html" class="btn btn-neutral float-right" title="Obtener el modelo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Documentacion WAVEWATCH III!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Franklin Ayala.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
