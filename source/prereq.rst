@@ -1,5 +1,5 @@
-Prerequisites
-=============
+System requeriments
+===================
 
 * Fortran compiler on linux
 * C++ compiler on Linux
