@@ -41,7 +41,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Obtener el modelo" href="obt_model.html" />
+    <link rel="next" title="Getting the code" href="obt_model.html" />
     <link rel="prev" title="WAVEWATCH III documentation!" href="index.html" /> 
 </head>
 
@@ -94,12 +94,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#installing-netcdf">Installing netCDF</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#installing-dependences">Installing dependences</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#building-netcdf">Building netCDF</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#installing-mpich">Installing MPICH</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-mpich">Installing MPICH</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="obt_model.html">Obtener el modelo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="obt_model.html">Getting the code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cmds_ini.html">Comandos iniciales</a></li>
 <li class="toctree-l1"><a class="reference internal" href="environment.html">Configurando el entorno</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contenidos_comp.html">Contenidos y compilación</a></li>
@@ -213,9 +213,11 @@ cpp --version
 <p>It is recommended to install netCDF-Fortran and netCDF-C manually, to do this first it woul be installed 2 dependeces: zlib and hdf5. These libraries together with libpng and jasper libraries will be used for the WRF compiling.</p>
 <div class="section" id="installing-dependences">
 <h3>Installing dependences<a class="headerlink" href="#installing-dependences" title="Permalink to this headline">¶</a></h3>
-<p>Before getting started, you must move into to the folder that contain WRF model directory and to type.</p>
-<p>mkdir -p Build_WRF/Libraries</p>
-<p>The command -p will create parent directory first if it doesn’t exist, i.e <code class="docutils literal notranslate"><span class="pre">Build_WRF</span></code> and then will create the folder <code class="docutils literal notranslate"><span class="pre">Libraries</span></code> where will be installed the libraries.</p>
+<p>Before getting started, you must move into to the folder that contain WRF model directory and to type</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p Build_WRF/Libraries
+</pre></div>
+</div>
+<p>The command <code class="docutils literal notranslate"><span class="pre">-p</span></code> will create parent directory first if it doesn’t exist, i.e <code class="docutils literal notranslate"><span class="pre">Build_WRF</span></code> and then will create the folder <code class="docutils literal notranslate"><span class="pre">Libraries</span></code> where will be installed the libraries.</p>
 <p>Add the following enviroment variables to your bash profile. In our case, the bash profile is <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code>, this file is normally in <code class="docutils literal notranslate"><span class="pre">home</span></code> folder and you can easily edit it.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">DIR</span><span class="o">=</span>/home/franklin/Documentos/WRF/Build_WRF/Libraries
 <span class="nb">export</span> <span class="nv">CC</span><span class="o">=</span>gcc
@@ -302,8 +304,9 @@ int data(x, y) ;
 </div>
 <p>If the terminal print: <strong>yes</strong>, then all is working perfectly!</p>
 </div>
+</div>
 <div class="section" id="installing-mpich">
-<h3>Installing MPICH<a class="headerlink" href="#installing-mpich" title="Permalink to this headline">¶</a></h3>
+<h2>Installing MPICH<a class="headerlink" href="#installing-mpich" title="Permalink to this headline">¶</a></h2>
 <p>MPICH library is necessary if you are planning to build WW3 in parallel and to couple WW3 with WRF. If your machine does not have more than 1 processor, or if you have no need to run WW3 with multiple processors, you can skip this section.</p>
 <p>To install this library:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install mpich
@@ -326,7 +329,6 @@ ln -s /lib/x86_64-linux-gnu/libz.so.1
 <p>The solution were found in this <a class="reference external" href="https://stackoverflow.com/questions/48306849/lib-x86-64-linux-gnu-libz-so-1-version-zlib-1-2-9-not-found">stackoverflow questions</a></p>
 </div>
 </div>
-</div>
 
 
            </div>
@@ -334,7 +336,7 @@ ln -s /lib/x86_64-linux-gnu/libz.so.1
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="obt_model.html" class="btn btn-neutral float-right" title="Obtener el modelo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="obt_model.html" class="btn btn-neutral float-right" title="Getting the code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="index.html" class="btn btn-neutral float-left" title="WAVEWATCH III documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

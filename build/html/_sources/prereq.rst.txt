@@ -52,11 +52,13 @@ It is recommended to install netCDF-Fortran and netCDF-C manually, to do this fi
 Installing dependences
 ----------------------
 
-Before getting started, you must move into to the folder that contain WRF model directory and to type. 
+Before getting started, you must move into to the folder that contain WRF model directory and to type
 
-mkdir -p Build_WRF/Libraries
+.. code-block:: bash
 
-The command -p will create parent directory first if it doesn't exist, i.e ``Build_WRF`` and then will create the folder ``Libraries`` where will be installed the libraries.
+    mkdir -p Build_WRF/Libraries
+
+The command ``-p`` will create parent directory first if it doesn't exist, i.e ``Build_WRF`` and then will create the folder ``Libraries`` where will be installed the libraries.
 
 Add the following enviroment variables to your bash profile. In our case, the bash profile is ``.zshrc``, this file is normally in ``home`` folder and you can easily edit it. 
 
@@ -171,8 +173,10 @@ Finally, its important to verify that the installed version has netCDF4, to do i
 
 If the terminal print: **yes**, then all is working perfectly!
 
+****************
 Installing MPICH
-----------------
+****************
+
 MPICH library is necessary if you are planning to build WW3 in parallel and to couple WW3 with WRF. If your machine does not have more than 1 processor, or if you have no need to run WW3 with multiple processors, you can skip this section.
 
 To install this library: 

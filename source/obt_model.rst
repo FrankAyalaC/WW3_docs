@@ -1,19 +1,15 @@
-Obtener el modelo
-=================
+Getting the code
+================
 
+*********
+WAVEWATCH
+*********
 
-*******************
-Descargar WAVEWATCH
-*******************
-
-WAVEWATCHIII v6.07 es un modelo de oleaje de tercerga generación, su documentación, así como todas sus demás características están alojas en la plataforma Github. Github es un portal para alojar (hostear) proyectos que utilizan el sistema de control de versiones, Git. Es importante saber que al ser de carácter público, la comunidad Github puede no sólo clonar información de los proyectos (repositorios) alojados, sino también aportar al desarrollo desde la creación de nuevas características como el manejo de errores (bugs)
+WAVEWATCHIII v6.07 is hosted in Github. Github is a Git repository hosting service and Git is a free, open and well-known source distributed version control system. Because it is a open project, the modelling community can both clone the newest or any version WW3 and contribuite to the development of WW3 from the creation of new features to the bugs and errors handling. For more information you can visit (link)
  
-Se recomienda revisar la información del repositorio en el `repositorio de WW3 <https://github.com/NOAA-EMC/WW3>`_ (hablar de los releases).
+It is recommended to review the availiable information of the `WW3 repository <https://github.com/NOAA-EMC/WW3>`_. In a specific section you can view all releases WW3
 
-
-Para más información leer Github (enlace a otro .rst interesante)
-
-Clonar el repositorio de WAVEWATCHIII implica hacer una copia del proyecto desde Gthub. Para clonar se escribe el siguiente comando en la terminal desde el directorio dónde se esea descargar WW3, debe estar git instalado (en linux/ubuntu viene por defecto):
+To clone the WW3 repository implies to do a copy of project from Github. To clone type the following command in your terminal from the directory where you want download WW3 source code. It must be installed git (on linux/ubuntu is installed by default)
 
 .. code-block:: bash
 
@@ -44,3 +40,6 @@ Gridgen es un programa escrito en MATLAB para la creación de los archivos relac
 	git clone https://github.com/NOAA-EMC/gridgen
 	
 
+*********
+OASIS-MCT
+*********
