@@ -13,16 +13,16 @@ WAVEWATCH is a wave model
     :maxdepth: 2
     :caption: Contenidos:
 
-    prereq
-    obt_model
-    cmds_ini
+    sys_req
+    get_model
+    init_commands
     environment
-    contenidos_comp
+    contains_compilation
     test_cases
     prep_conf
-    compilacion
+    compilation
     preprocessing
-    eje_model
+    exe_model
 
 
 
