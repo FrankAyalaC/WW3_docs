@@ -1,5 +1,5 @@
-Preprocesamiento
-================
+Preprocessing
+=============
 
 # Archivos de entrada
 

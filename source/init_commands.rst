@@ -1,5 +1,5 @@
-Comandos iniciales
-==================
+Initial commands
+================
 
 
 *******************

@@ -1,4 +1,4 @@
-Preparar configuración
-======================
+Prepare configuration
+=====================
 
 preparar

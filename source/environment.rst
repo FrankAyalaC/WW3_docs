@@ -1,5 +1,5 @@
-Configurando el entorno
-=======================
+Setting up the environment
+==========================
 
 WAVEWATCH III permite que los resultados obtenidos sean exportados en formato NetCDF-4. Para esto se deben verificar las versiones de la librería NETCDF instalada, así:
 
