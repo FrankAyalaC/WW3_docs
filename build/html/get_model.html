@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,10 +31,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -174,31 +176,47 @@
 <div class="section" id="wavewatch">
 <h2>WAVEWATCH<a class="headerlink" href="#wavewatch" title="Permalink to this headline">¶</a></h2>
 <p>WAVEWATCHIII v6.07 is hosted in Github. Github is a Git repository hosting service and Git is a free, open and well-known source distributed version control system. Because it is a open project, the modelling community can both clone the newest or any version WW3 and contribuite to the development of WW3 from the creation of new features to the bugs and errors handling. For more information you can visit (link)</p>
-<p>It is recommended to review the availiable information of the <a class="reference external" href="https://github.com/NOAA-EMC/WW3">WW3 repository</a>. In a specific section you can view all releases WW3</p>
+<p>It is recommended to review the availiable information of the <a class="reference external" href="https://github.com/NOAA-EMC/WW3">WW3 repository</a>. In a specific section you can view all releases WW3 and a brief description of each one.</p>
 <p>To clone the WW3 repository implies to do a copy of project from Github. To clone type the following command in your terminal from the directory where you want download WW3 source code. It must be installed git (on linux/ubuntu is installed by default)</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/NOAA-EMC/WW3
 </pre></div>
 </div>
-<p>Lo anterior descargará una carpeta llamada WW3 en el directorio donde se clonó. Esta carpeta contiene la siguiente estructura:</p>
+<p>The previous command line will download a folder called <code class="docutils literal notranslate"><span class="pre">WW3</span></code> in the directory where it was cloned. This folder contains this structure:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">manual</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manual</span></code>: the manual directory, here are the .tex files that build the manual WW3.</p></li>
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">model</span></code>:</dt><dd><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bin</span></code>: Esta carpeta contiene los programas necesarios para la compilación de WAVEWATCH (reccordar que los programas en bash son ejecutados con un <code class="docutils literal notranslate"><span class="pre">.</span></code> antes de la ruta)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">aux</span></code>:</p></li>
+<dt><code class="docutils literal notranslate"><span class="pre">model</span></code>: model source code, here the files are built after the compilation (FORTRAN modules, etc.), template input files to execute the model, etc.</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">bin</span></code>: this folder contains the neccesary executable programs to compile WW3.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">aux</span></code>: Raw auxiliary programs fo the compilation WW3</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ftn</span></code>: All FORTRAN files (source code)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inp</span></code> : input files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nml</span></code>: namelist input files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mod</span></code>: module files (created only after the compilation)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">obj</span></code>: object files (created only after the compilation)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exe</span></code>: executable files (created only after the compilation)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">regtests</span></code>:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">guide</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">smc_docs</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">regtests</span></code>: WW3 test cases</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">guide</span></code>: a guide to WW3 in .tex files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smc_docs</span></code>: documentacion and files to SMC grids</p></li>
 </ul>
-<p>En este directorio queda una carpeta oculta que llamada .git, esta carpeta es creada por defecto cuando se tiene una carpeta como repositorio de Github. un archivo de licencia, un archivo .gitignore y otro README.md</p>
+<p>Additionally, from your top-level- directory (<code class="docutils literal notranslate"><span class="pre">path/to/WW3/model/</span></code>) you can type:</p>
+<p><strong>explain about to type .file referring to exexuctbale shell files in Linux</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./model/bin/ww3_from_ftp.sh
+</pre></div>
+</div>
+<p>With this instructions you can get the binary and large files used for WW3 test cases in <code class="docutils literal notranslate"><span class="pre">regtest</span></code> directory. With this ub the top-level directory you could get two folder more:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cases</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_regtests</span></code>: data necessart to execution some regtests</p></li>
+</ul>
+<p>Also, in this directory there is a hidden folder <code class="docutils literal notranslate"><span class="pre">.git</span></code>, which is created by default when a Github repository is cloned on your local machine, a licence file, .gitignore file (to exclude same files) and README.md file to desribe instructions.</p>
 </div>
 <div class="section" id="gridgen">
 <h2>Gridgen<a class="headerlink" href="#gridgen" title="Permalink to this headline">¶</a></h2>
-<p>Gridgen es un programa escrito en MATLAB para la creación de los archivos relacionadas a la batimetría, obstrucciones y máscaras empleados en WAVEWATCH, también está alojado en la plataforma Gtihub y puede ser obtenido así:</p>
+<p>Gridgen is a MATLAB program to create files that contain bathimethric information to be used in WW3. this program is also hosteed in Github and you can obtain with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/NOAA-EMC/gridgen
 </pre></div>
 </div>
