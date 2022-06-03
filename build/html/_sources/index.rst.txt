@@ -56,6 +56,8 @@ Please, look out all signs that showed along the tutorial:
     compilation
     preprocessing
     exe_model
+    README_aw
+    README_owa
 
 Disclaimer
 **********

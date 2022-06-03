@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Search &mdash; WAVEWATCHIII Online Tutorial 6.07 documentation</title>
+  <title>AW simulations in BOCHICA &mdash; WAVEWATCHIII Online Tutorial 6.07 documentation</title>
   
 
   
@@ -26,7 +26,6 @@
   
 
   
-    
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -41,10 +40,8 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-    <script type="text/javascript" src="_static/searchtools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -71,7 +68,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -101,8 +98,6 @@
 <li class="toctree-l1"><a class="reference internal" href="compilation.html">Compilation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preprocessing.html">Preprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exe_model.html">Execute the model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="README_aw.html">AW simulations in BOCHICA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="README_owa.html">OWA simulations in BOCHICA</a></li>
 </ul>
 
             
@@ -151,10 +146,14 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Search</li>
+      <li>AW simulations in BOCHICA</li>
     
     
       <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/README_aw.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -166,18 +165,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="aw-simulations-in-bochica">
+<h1>AW simulations in BOCHICA<a class="headerlink" href="#aw-simulations-in-bochica" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="initial-folders">
+<h2>Initial folders<a class="headerlink" href="#initial-folders" title="Permalink to this headline">¶</a></h2>
+<p>Initially, a folder havo to be created where the coupled simulation will be executed (WORKDIR). This folder have to be in the <code class="docutils literal notranslate"><span class="pre">runs</span></code> directory:</p>
+<p>3 subfolders must be created/copied in this directory:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">input_files</span></code>: is a folder where the initial wrf files must be putted.</p></li>
+</ol>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this directory there is a subfolder with the executable files for the coupled run from a local machine (<code class="docutils literal notranslate"><span class="pre">exec_from_local</span></code>). This folder must be copied to the local machine in order to execute them there.</p>
+<ol class="arabic simple" start="3">
+<li><p>An empty folder where will be the final files before to launch the simulation</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="running-executables">
+<h2>Running executables<a class="headerlink" href="#running-executables" title="Permalink to this headline">¶</a></h2>
+<p>It must be edited <code class="docutils literal notranslate"><span class="pre">init.sh</span></code> file according to the folder initially created. This file is executed after all necessary modifications:</p>
+<p>In the local machine must be created a similar folder to <code class="docutils literal notranslate"><span class="pre">aw_HURRICANE_NAME</span></code> like this:</p>
+<p>A folder with the initial batimethric files must be created in <code class="docutils literal notranslate"><span class="pre">owa_HURRICANE_NAME</span></code>, these files are copied for the original directory.</p>
+<p>Inside this directory it is also copied the folder with the executable files aforementioned. The first file to edit is <code class="docutils literal notranslate"><span class="pre">convert_wrf_and_croco_input.sh</span></code> according the required settings. After this, <code class="docutils literal notranslate"><span class="pre">convert_wrf_and_croco_input.sh</span></code> must be runned in order to preprare the input files to the noncoupled simulation of ww3:</p>
+<p>The non coupled simulation is generated in the cluster and it is used to obtain the ww3 initial file via <code class="docutils literal notranslate"><span class="pre">frc_ww3.sh</span></code> bash script. This initial file is later employed to generate the initial OASIS files. Please edit the script according to the requirements:</p>
+<p>Subsequently, another file in the local machine is executed. With <code class="docutils literal notranslate"><span class="pre">./prep_oasis_files.sh</span></code> script are created the initial files for OASIS (<code class="docutils literal notranslate"><span class="pre">wav.nc</span></code> and <code class="docutils literal notranslate"><span class="pre">atm.nc</span></code>). Edit it and run it like this:</p>
+<p>In order to set-up the required files to launch the coupled run, it must be edited the <a href="#id1"><span class="problematic" id="id2">``</span></a>aw_files.sh``script and later it is executed:</p>
+<p>Finally, the coupled simulations is launched after to edit the <code class="docutils literal notranslate"><span class="pre">submit.pbs</span></code></p>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
@@ -219,14 +238,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>
