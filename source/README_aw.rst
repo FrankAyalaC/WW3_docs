@@ -15,19 +15,20 @@ Initially, a folder havo to be created where the coupled simulation will be exec
 
 	1. ``input_files``: is a folder where the initial wrf files must be putted.
 
-.. code-block:: bash
+	.. code-block:: bash
 
-	mkdir input_files
-	cp path/to/wrf/files/* input_files/
+		mkdir input_files
+		cp path/to/wrf/files/* input_files/
 
 	2. ``exec_files``: is a folder where all executable files to prepare the coupled simulation are hosted. This folder is in the root directory of the user
 
-.. code-block:: bash
+	.. code-block:: bash
 
-	cp -r ~/exec_files/ .
+		cp -r ~/exec_files/ .
 
-.. note:: 
-	In this directory there is a subfolder with the executable files for the coupled run from a local machine (``exec_from_local``). This folder must be copied to the local machine in order to execute them there.
+	.. note:: 
+	
+		In this directory there is a subfolder with the executable files for the coupled run from a local machine (``exec_from_local``). This folder must be copied to the local machine in order to execute them there.
 
 	3. An empty folder where will be the final files before to launch the simulation
 
